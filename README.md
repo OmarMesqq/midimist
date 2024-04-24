@@ -11,3 +11,7 @@ O projeto está dividido em dois módulos:
     - `npm install`
     - `npm run start`
 
+2. Backend: compile o projeto Go
+    - `go build`
+    - `./api_backend`
+
