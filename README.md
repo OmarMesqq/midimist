@@ -10,6 +10,8 @@ O projeto está dividido em dois módulos:
 1. Frontend: segue a configuração de um projeto React Native padrão
     - `npm install`
     - `npm run start`
+    - (iOS) `cd ios && pod install`
+    - Em outro terminal, `npm run android` ou `npm run ios`
 
 2. Backend: compile o projeto Go
     - `go build`
