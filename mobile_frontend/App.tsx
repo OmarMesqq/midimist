@@ -47,16 +47,19 @@ function Section({children, title}: SectionProps): React.JSX.Element {
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
-  const [apiStatus, setApiStatus] = useEffect([]);
+  const [apiStatus, setApiStatus] = useState([]);
 
   useEffect(() => {
-    fetch('10.0.2.2:8080/api')
+    fetch('http://localhost:8080/api')
       .then((res) => {
-        return res.json();
+        return res.text();
       })
       .then((data) => {
         console.log(data);
         setApiStatus(data);
+      })
+      .catch((e) => {
+	console.error(">>> ERROR: ", e);
       });
   }, []);
 
@@ -78,8 +81,8 @@ function App(): React.JSX.Element {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
-          <Section title="Step One">
-	    Rastreador de Mídia
+          <Section title="Rastreador de Mídia">
+	     {apiStatus}
           </Section>
         </View>
       </ScrollView>
