@@ -10,6 +10,7 @@ O projeto está dividido em dois módulos:
 1. Frontend: segue a configuração de um projeto React Native padrão
     - `npm install`
     - `npm run start`
+    - (Android) `adb reverse tcp:8080 tcp:8080`
     - (iOS) `cd ios && pod install`
     - Em outro terminal, `npm run android` ou `npm run ios`
 
