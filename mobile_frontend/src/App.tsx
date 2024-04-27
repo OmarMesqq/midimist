@@ -1,18 +1,16 @@
-import {React, useEffect, useState} from 'react';
+import { React, useEffect, useState } from 'react';
 import {
-  StyleSheet,
   useColorScheme,
 } from 'react-native';
 
-import {
-  Colors,
-} from 'react-native/Libraries/NewAppScreen';
-
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import { Home } from './components/layout/Home'
 import { TopBar } from './components/commons/TopBar'
+import { BottomBar } from './components/commons/BottomBar'
+import { Profile } from './components/layout/Profile';
+import { Notifications } from './components/layout/Notifications';
 
 const Stack = createNativeStackNavigator();
 
@@ -30,44 +28,22 @@ function App(): React.JSX.Element {
         setApiStatus(data);
       })
       .catch((e) => {
-	console.error(">>> ERROR: ", e);
+        console.error(">>> Erro ao se conectar com a API: ", e);
       });
   }, []);
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
 
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{
         header: () => <TopBar />,
-        headerStyle: { height: 54 } 
+        headerStyle: { height: 54 }
       }}>
-        <Stack.Screen name="Home" component={Home} />
-        {/* Add more screens as needed */}
+        <Stack.Screen name="BottomNavBar" component={BottomBar} />
+        <Stack.Screen name="Profile" component={Profile} />
+        <Stack.Screen name="Notifications" component={Notifications} />
       </Stack.Navigator>
     </NavigationContainer>
-    );
+  );
 }
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
 
 export default App;
