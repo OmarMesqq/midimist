@@ -10,7 +10,7 @@ export const TopBar = () => {
       <TouchableOpacity onPress={() => navigation.navigate('Home')}>
         <Image source={require('../../assets/images/logo.png')} style={styles.logo} />
       </TouchableOpacity>
-      
+
       <View style={styles.rightContainer}>
         <TouchableOpacity onPress={() => navigation.navigate('Notifications')}>
           <Image source={require('../../assets/images/notifications.png')} style={styles.icon} />
@@ -26,8 +26,8 @@ export const TopBar = () => {
 const styles = StyleSheet.create({
   headerContainer: {
     backgroundColor: '#000',
-    flexDirection: 'row', 
-    justifyContent: 'space-between', 
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     alignItems: 'center',
     padding: 10,
     width: '100%',

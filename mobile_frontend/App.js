@@ -34,14 +34,14 @@ function App() {
   return (
     <SafeAreaProvider style={styles.appStyle}>
       <NavigationContainer>
-      <Stack.Navigator screenOptions={{
-        header: () => <TopBar setActiveComponent={setActiveComponent} />,
-      }}>
-        <Stack.Screen name="BottomNavBar" component={BottomBar} />
-        <Stack.Screen name="Profile" component={Profile} />
-        <Stack.Screen name="Notifications" component={Notifications} />
-      </Stack.Navigator>
-    </NavigationContainer>
+        <Stack.Navigator screenOptions={{
+          header: () => <TopBar setActiveComponent={setActiveComponent} />,
+        }}>
+          <Stack.Screen name="BottomNavBar" component={BottomBar} />
+          <Stack.Screen name="Profile" component={Profile} />
+          <Stack.Screen name="Notifications" component={Notifications} />
+        </Stack.Navigator>
+      </NavigationContainer>
     </SafeAreaProvider>
   );
 }
