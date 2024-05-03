@@ -7,12 +7,10 @@ export const TopBar = () => {
 
   return (
     <SafeAreaView style={styles.headerContainer}>
-      {/* Logo on the Left */}
       <TouchableOpacity onPress={() => navigation.navigate('Home')}>
         <Image source={require('../../assets/images/logo.png')} style={styles.logo} />
       </TouchableOpacity>
       
-      {/* Icons on the Right */}
       <View style={styles.rightContainer}>
         <TouchableOpacity onPress={() => navigation.navigate('Notifications')}>
           <Image source={require('../../assets/images/notifications.png')} style={styles.icon} />
