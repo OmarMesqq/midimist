@@ -1,44 +1,36 @@
-import { Image, StyleSheet, View, TouchableOpacity } from "react-native";
 import { useNavigation } from '@react-navigation/native';
+import { Image, StyleSheet, View, TouchableOpacity } from "react-native";
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export const TopBar = () => {
   const navigation = useNavigation();
 
-  const navigateToNotifications = () => {
-    navigation.navigate('Notifications');
-  };
-
-  const navigateToProfile = () => {
-    navigation.navigate('Profile');
-  };
-
   return (
-    <View style={styles.headerContainer}>
-      <Image source={require('../../assets/images/logo.png')} style={styles.logo} />
+    <SafeAreaView style={styles.headerContainer}>
+      <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+        <Image source={require('../../assets/images/logo.png')} style={styles.logo} />
+      </TouchableOpacity>
 
       <View style={styles.rightContainer}>
-        <TouchableOpacity onPress={navigateToNotifications}>
+        <TouchableOpacity onPress={() => navigation.navigate('Notifications')}>
           <Image source={require('../../assets/images/notifications.png')} style={styles.icon} />
         </TouchableOpacity>
-
-        <TouchableOpacity onPress={navigateToProfile}>
+        <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
           <Image source={require('../../assets/images/profile.png')} style={styles.icon} />
         </TouchableOpacity>
       </View>
-
-    </View>
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
   headerContainer: {
-    height: 54,
-    paddingHorizontal: 10,
+    backgroundColor: '#000',
     flexDirection: 'row',
-    alignItems: 'center',
     justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: 10,
     width: '100%',
-    backgroundColor: '#000000',
   },
   logo: {
     width: 40,
@@ -46,7 +38,7 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
   },
   rightContainer: {
-    flexDirection: 'row', // Keep the notification and profile icons side by side
+    flexDirection: 'row',
     alignItems: 'center',
   },
   icon: {
@@ -54,6 +46,5 @@ const styles = StyleSheet.create({
     height: 40,
     resizeMode: 'contain',
     marginLeft: 15,
-    marginRight: 5,
   }
 });
