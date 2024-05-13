@@ -8,15 +8,15 @@ export const TopBar = () => {
   return (
     <SafeAreaView style={styles.headerContainer}>
       <TouchableOpacity onPress={() => navigation.navigate('Home')}>
-        <Image source={require('../../assets/images/logo.png')} style={styles.logo} />
+        <Image source={require('../../assets/logo.png')} style={styles.logo} />
       </TouchableOpacity>
 
       <View style={styles.rightContainer}>
         <TouchableOpacity onPress={() => navigation.navigate('Notifications')}>
-          <Image source={require('../../assets/images/notifications.png')} style={styles.icon} />
+          <Image source={require('../../assets/notifications.png')} style={styles.icon} />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
-          <Image source={require('../../assets/images/profile.png')} style={styles.icon} />
+          <Image source={require('../../assets/profile.png')} style={styles.icon} />
         </TouchableOpacity>
       </View>
     </SafeAreaView>

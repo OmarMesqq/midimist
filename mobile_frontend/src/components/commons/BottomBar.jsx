@@ -16,7 +16,7 @@ export const BottomBar = () => {
             <Tab.Screen name="Home" component={Home} options={{
                 tabBarIcon: ({ color, size }) => (
                     <Image
-                        source={require('../../assets/images/home.png')}
+                        source={require('../../assets/home.png')}
                         style={[styles.icon, { tintColor: color }]}
                     />
                 )
@@ -25,7 +25,7 @@ export const BottomBar = () => {
             <Tab.Screen name="Chat" component={Home} options={{
                 tabBarIcon: ({ color, size }) => (
                     <Image
-                        source={require('../../assets/images/chat.png')}
+                        source={require('../../assets/chat.png')}
                         style={[styles.icon, { tintColor: color }]}
                     />
                 )
@@ -34,7 +34,7 @@ export const BottomBar = () => {
             <Tab.Screen name="Add" component={Home} options={{
                 tabBarIcon: ({ color, size }) => (
                     <Image
-                        source={require('../../assets/images/add_media.png')}
+                        source={require('../../assets/add_media.png')}
                         style={[styles.add_media_icon, { tintColor: color }]}
                     />
                 )
@@ -43,7 +43,7 @@ export const BottomBar = () => {
             <Tab.Screen name="My Lists" component={Home} options={{
                 tabBarIcon: ({ color, size }) => (
                     <Image
-                        source={require('../../assets/images/my_lists.png')}
+                        source={require('../../assets/my_lists.png')}
                         style={[styles.icon, { tintColor: color }]}
                     />
                 )
@@ -52,7 +52,7 @@ export const BottomBar = () => {
             <Tab.Screen name="Search" component={Home} options={{
                 tabBarIcon: ({ color, size }) => (
                     <Image
-                        source={require('../../assets/images/search.png')}
+                        source={require('../../assets/search.png')}
                         style={[styles.icon, { tintColor: color }]}
                     />
                 )
