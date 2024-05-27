@@ -15,3 +15,8 @@ O projeto está dividido em dois módulos:
     - `go build`
     - `./api_backend`
 
+API KEY
+6b3601ec09b0cc42e6e94c11061cea86
+
+API ACCESS TOKEN
+eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2YjM2MDFlYzA5YjBjYzQyZTZlOTRjMTEwNjFjZWE4NiIsInN1YiI6IjY2NTRiZjk3NmExYmUyNjdmYTVhNjMyYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.AXZLoTDNYsCc3CEQAYgZiv_lAqzDsOKGidEPsVbAIhM
