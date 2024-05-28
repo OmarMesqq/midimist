@@ -1,6 +1,7 @@
 import { Image, StyleSheet } from "react-native";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Home } from './../layout/Home';
+import { Chat } from './../layout/Chat';
 
 const Tab = createBottomTabNavigator();
 
@@ -22,7 +23,7 @@ export const BottomBar = () => {
                 )
             }} />
 
-            <Tab.Screen name="Chat" component={Home} options={{
+            <Tab.Screen name="Chat" component={Chat} options={{
                 tabBarIcon: ({ color, size }) => (
                     <Image
                         source={require('../../assets/images/chat.png')}
