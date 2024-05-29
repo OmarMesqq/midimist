@@ -12,6 +12,14 @@ export const Chat = () => {
     { profileImage: require('../../assets/images/profile.png'), status: 'busy' },
     { profileImage: require('../../assets/images/profile.png'), status: 'away' },
     { profileImage: require('../../assets/images/profile.png'), status: 'online' },
+    { profileImage: require('../../assets/images/profile.png'), status: 'offline' },
+    { profileImage: require('../../assets/images/profile.png'), status: 'busy' },
+    { profileImage: require('../../assets/images/profile.png'), status: 'away' },
+    { profileImage: require('../../assets/images/profile.png'), status: 'online' },
+    { profileImage: require('../../assets/images/profile.png'), status: 'offline' },
+    { profileImage: require('../../assets/images/profile.png'), status: 'busy' },
+    { profileImage: require('../../assets/images/profile.png'), status: 'away' },
+    { profileImage: require('../../assets/images/profile.png'), status: 'online' },
   ];
 
   const chats = [
