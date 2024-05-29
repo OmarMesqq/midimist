@@ -1,20 +1,15 @@
 ## Projeto de INF1039
 
-O projeto está dividido em dois módulos:
+O projeto está dividido em um módulo:
 
 1. `mobile_frontend`: contém o aplicativo Android e iOS
-2. `api_backend`: contém a lógica de negócio, de obtenção de mídias e acesso ao banco de dados
-
+   
 ### Setup 
 
 1. Frontend: segue a configuração de um projeto Expo
     - `npm install`
-    - `npx expo start`
-
-2. Backend: compile o projeto Go
-    - `go build`
-    - `./api_backend`
-
+    - `npx expo start
+   
 API KEY
 6b3601ec09b0cc42e6e94c11061cea86
 
