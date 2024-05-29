@@ -1,11 +1,9 @@
 import React from 'react';
-import { Text, View, StyleSheet, ScrollView, FlatList, TouchableOpacity } from 'react-native';
-import UserReviewBox from '../commons/UserReviewBox';
-import { abateReview } from '../../mocks/UserReviewMocks';
+import { Text, View, StyleSheet, ScrollView, FlatList } from 'react-native';
 import ProfileButton from '../commons/ProfileChat';
 import ChatItem from '../commons/ChatItem';
 
-export const Chat = () => {
+export const Chat = ({ navigation }) => {
   const friends = [
     { profileImage: require('../../assets/images/profile.png'), status: 'online' },
     { profileImage: require('../../assets/images/profile.png'), status: 'offline' },
@@ -53,6 +51,8 @@ export const Chat = () => {
             profileImage={item.profileImage}
             name={item.name}
             lastMessage={item.lastMessage}
+            chatId={item.id}
+            navigation={navigation}
           />
         )}
         style={styles.chatList}

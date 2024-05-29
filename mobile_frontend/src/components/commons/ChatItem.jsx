@@ -1,18 +1,20 @@
-// ChatItem.jsx
 import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 
-const ChatItem = ({ profileImage, name, lastMessage }) => {
+const ChatItem = ({ profileImage, name, lastMessage, chatId, navigation }) => {
   return (
-    <View style={styles.container}>
+    <TouchableOpacity
+      style={styles.container}
+      onPress={() => navigation.navigate('ChatDetails', { chatId })}
+    >
       <Image source={profileImage} style={styles.image} />
       <View style={styles.textContainer}>
         <Text style={styles.name}>{name}</Text>
         <Text style={styles.lastMessage}>{lastMessage}</Text>
       </View>
-    </View>
+    </TouchableOpacity>
   );
-};aasfsdf
+};
 
 const styles = StyleSheet.create({
   container: {
