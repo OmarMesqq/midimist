@@ -12,7 +12,7 @@ const ChatItem = ({ profileImage, name, lastMessage }) => {
       </View>
     </View>
   );
-};aaaaaaa
+};aasfsdf
 
 const styles = StyleSheet.create({
   container: {
