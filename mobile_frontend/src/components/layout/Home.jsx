@@ -1,10 +1,13 @@
 import { Text, View, StyleSheet, Pressable } from "react-native";
 import UserReviewBox from "../commons/UserReviewBox";
 import {abateReview} from "../../mocks/UserReviewMocks";	
+import Carrossel from "../../components/commons/Carrossel"
+import {shrek} from "../../mocks/movieCarouselMocks";
 
 export const Home = () => {
   return (
     <View style={styles.home}>
+
 	  <View style={styles.popularReviews}>
 	  	<Text style={styles.headerText}>
        		   Popular Reviews
@@ -22,8 +25,20 @@ export const Home = () => {
 	  <View style={styles.forYou}>
 		<Text style={styles.headerText}>
        			For You   
-	  	</Text>
-	  </View>
+	  </Text>
+    
+    <Carrossel
+    data={shrek.data}
+    renderItem={({ item }) => (
+        item && item.poster_path ? (
+            <Image source={{ uri: item.poster_path }} style={{ width: 500, height: 500 }} />
+        ) : null
+    )}
+    itemWidth={500}
+    sliderWidth={500}
+  />
+    
+    </View>
     </View>
   );
 };
@@ -49,4 +64,7 @@ const styles = StyleSheet.create({
   forYou: {
     marginBottom: 20,
   },
+  Carrossel:{
+    marginBottom: 20
+  }
 });
