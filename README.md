@@ -1,9 +1,8 @@
 ## Projeto de INF1039
 
-O projeto está dividido em dois módulos:
+O projeto está dividido em um módulo:
 
 1. `mobile_frontend`: contém o aplicativo Android e iOS
-2. `api_backend`: contém a lógica de negócio, de obtenção de mídias e acesso ao banco de dados
 
 ### Setup 
 
