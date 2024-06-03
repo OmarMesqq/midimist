@@ -3,6 +3,7 @@ import UserReviewBox from "../commons/UserReviewBox";
 import {abateReview} from "../../mocks/UserReviewMocks";	
 import Carrossel from "../../components/commons/Carrossel"
 import {shrek} from "../../mocks/movieCarouselMocks";
+import {TMDB_BASE_URL, API_ACCESS_TOKEN} from '@env';
 
 export const Home = () => {
   return (
@@ -31,7 +32,7 @@ export const Home = () => {
     data={shrek.data}
     renderItem={({ item }) => (
         item && item.poster_path ? (
-            <Image source={{ uri: item.poster_path }} style={{ width: 500, height: 500 }} />
+            <Image source={{ uri: TMDB_BASE_URL.poster_path }} style={{ width: 500, height: 500 }} />
         ) : null
     )}
     itemWidth={500}
