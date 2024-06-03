@@ -42,7 +42,8 @@ const instance_object = {
 const get_default_headers = () => {
     return {
         'Content-Type': 'application/json', 
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
+        'Authorization': `${API_ACCESS_TOKEN}` 
     }
 }
 
