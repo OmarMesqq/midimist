@@ -3,7 +3,7 @@ import UserReviewBox from "../commons/UserReviewBox";
 import {abateReview} from "../../mocks/UserReviewMocks";	
 import Carrossel from "../../components/commons/Carrossel"
 import {shrek} from "../../mocks/movieCarouselMocks";
-import {TMDB_BASE_URL, API_ACCESS_TOKEN} from '@env';
+
 
 export const Home = () => {
   return (
