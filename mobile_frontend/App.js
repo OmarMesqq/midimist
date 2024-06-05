@@ -7,7 +7,8 @@ import { TopBar } from './src/components/commons/TopBar';
 import { BottomBar } from './src/components/commons/BottomBar';
 import { Profile } from './src/components/layout/Profile';
 import { Notifications } from './src/components/layout/Notifications';
-import { ChatDetails } from './src/components/layout/ChatDetails'; // Certifique-se que está importado corretamente
+import { ChatDetails } from './src/components/layout/ChatDetails';
+import { MovieDetails } from './src/components/layout/MovieDetails';
 
 const Stack = createNativeStackNavigator();
 
@@ -42,6 +43,13 @@ function App() {
           <Stack.Screen 
             name="ChatDetails" 
             component={ChatDetails} 
+            options={{
+              header: (props) => <TopBar {...props} />
+            }}
+          />
+          <Stack.Screen 
+            name="MovieDetails" 
+            component={MovieDetails} 
             options={{
               header: (props) => <TopBar {...props} />
             }}
