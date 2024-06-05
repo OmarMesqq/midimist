@@ -9,7 +9,15 @@ export const List = () => {
     { id: '1', image: require('../../assets/images/dune.png'), title: 'Dune: Part Two', status: 'Planning' },
     { id: '2', image: require('../../assets/images/shrek.png'), title: 'Shrek 2', status: 'Watching' },
     { id: '3', image: require('../../assets/images/kong.png'), title: 'Kong', status: 'Watching' },
-    { id: '4', image: require('../../assets/images/kungfupanda.png'), title: 'Kung Fu Panda', status: 'Watching' }
+    { id: '4', image: require('../../assets/images/kungfupanda.png'), title: 'Kung Fu Panda', status: 'Watching' },
+    { id: '5', image: require('../../assets/images/dune.png'), title: 'Dune: Part Two', status: 'Planning' },
+    { id: '6', image: require('../../assets/images/shrek.png'), title: 'Shrek 2', status: 'Watching' },
+    { id: '7', image: require('../../assets/images/kong.png'), title: 'Kong', status: 'Watching' },
+    { id: '8', image: require('../../assets/images/kungfupanda.png'), title: 'Kung Fu Panda', status: 'Watching' },
+    { id: '9', image: require('../../assets/images/dune.png'), title: 'Dune: Part Two', status: 'Planning' },
+    { id: '10', image: require('../../assets/images/shrek.png'), title: 'Shrek 2', status: 'Watching' },
+    { id: '11', image: require('../../assets/images/kong.png'), title: 'Kong', status: 'Watching' },
+    { id: '12', image: require('../../assets/images/kungfupanda.png'), title: 'Kung Fu Panda', status: 'Watching' },
   ];
 
   const renderItem = ({ item }) => (
