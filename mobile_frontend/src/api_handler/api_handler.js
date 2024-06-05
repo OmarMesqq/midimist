@@ -15,9 +15,9 @@ const get_movie_details = async (movieId) => {
 const get_movie_id = async (movieName) => {
     try {
         const instance = get_instance(instance_type.FILME)
-        const resposta = instance.get(`${TMDB_BASE_URL}/search/movie`,
+        const resposta = instance.get(`${process.env.TMDB_BASE_URL}/search/movie`,
         {params: {
-            api_access_token: API_ACCESS_TOKEN, query: title
+            api_access_token: process.env.API_ACCESS_TOKEN, query: title
         }})
         if (Response.data.results.length > 0){
             const movie = response.data.results[0];
