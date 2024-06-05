@@ -32,7 +32,7 @@ export const Home = () => {
     data={shrek.data}
     renderItem={({ item }) => (
         item && item.poster_path ? (
-            <Image source={{ uri: TMDB_BASE_URL + item.poster_path }} style={{ width: 500, height: 500 }} />
+            <Image source={{ uri: process.env.TMDB_BASE_URL + item.poster_path }} style={{ width: 500, height: 500 }} />
         ) : null
     )}
     itemWidth={500}
