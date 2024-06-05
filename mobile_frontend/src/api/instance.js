@@ -35,15 +35,15 @@ const instance_object = {
         Headers: {
             
         }, 
-        baseURL: `${TMDB_BASE_URL}`,
-        params: {api_access_token: API_ACCESS_TOKEN}
+        baseURL: `${process.env.TMDB_BASE_URL}`,
+        params: {api_access_token: process.env.API_ACCESS_TOKEN}
     }
 } 
 const get_default_headers = () => {
     return {
         'Content-Type': 'application/json', 
         'Access-Control-Allow-Origin': '*',
-        'Authorization': `${API_ACCESS_TOKEN}` 
+        'Authorization': `${process.env.API_ACCESS_TOKEN}` 
     }
 }
 
