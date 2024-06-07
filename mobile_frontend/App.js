@@ -18,44 +18,19 @@ function App() {
   return (
     <SafeAreaProvider style={styles.appStyle}>
       <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen 
-            name="BottomNavBar" 
-            component={BottomBar} 
-            options={{
-              header: (props) => <TopBar {...props} />
-            }}
-          />
-          <Stack.Screen 
-            name="Profile" 
-            component={Profile} 
-            options={{
-              header: (props) => <TopBar {...props} />
-            }}
-          />
-          <Stack.Screen 
-            name="Notifications" 
-            component={Notifications} 
-            options={{
-              header: (props) => <TopBar {...props} />
-            }}
-          />
-          <Stack.Screen 
-            name="ChatDetails" 
-            component={ChatDetails} 
-            options={{
-              header: (props) => <TopBar {...props} />
-            }}
-          />
-          <Stack.Screen 
-            name="MovieDetails" 
-            component={MovieDetails} 
-            options={{
-              header: (props) => <TopBar {...props} />
-            }}
-          />
-        </Stack.Navigator>
-      </NavigationContainer>
+	  <Stack.Navigator
+  		screenOptions={{
+		    header: (props) => <TopBar {...props} />,
+  		}}
+>
+  <Stack.Screen name="BottomNavBar" component={BottomBar} />
+  <Stack.Screen name="Profile" component={Profile} />
+  <Stack.Screen name="Notifications" component={Notifications} />
+  <Stack.Screen name="ChatDetails" component={ChatDetails} />
+  <Stack.Screen name="MovieDetails" component={MovieDetails} />
+</Stack.Navigator>
+
+     </NavigationContainer>
     </SafeAreaProvider>
   );
 }
