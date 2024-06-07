@@ -3,6 +3,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Home } from './../layout/Home';
 import { Chat } from './../layout/Chat';
 import { List } from './../layout/GridList';
+import { Search } from './../layout/Search';
 
 const Tab = createBottomTabNavigator();
 
@@ -51,7 +52,7 @@ export const BottomBar = () => {
                 )
             }} />
 
-            <Tab.Screen name="Search" component={Home} options={{
+            <Tab.Screen name="Search" component={Search} options={{
                 tabBarIcon: ({ color, size }) => (
                     <Image
                         source={require('../../assets/images/search.png')}
