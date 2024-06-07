@@ -1,6 +1,8 @@
 import { Image, StyleSheet } from "react-native";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Home } from './../layout/Home';
+import { Chat } from './../layout/Chat';
+import { List } from './../layout/GridList';
 import { Search } from './../layout/Search';
 
 const Tab = createBottomTabNavigator();
@@ -23,7 +25,7 @@ export const BottomBar = () => {
                 )
             }} />
 
-            <Tab.Screen name="Chat" component={Home} options={{
+            <Tab.Screen name="Chat" component={Chat} options={{
                 tabBarIcon: ({ color, size }) => (
                     <Image
                         source={require('../../assets/images/chat.png')}
@@ -41,7 +43,7 @@ export const BottomBar = () => {
                 )
             }} />
 
-            <Tab.Screen name="My Lists" component={Home} options={{
+            <Tab.Screen name="My Lists" component={List} options={{
                 tabBarIcon: ({ color, size }) => (
                     <Image
                         source={require('../../assets/images/my_lists.png')}
