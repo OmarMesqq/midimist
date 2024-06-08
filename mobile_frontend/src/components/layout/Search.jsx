@@ -1,16 +1,17 @@
 import { StyleSheet, Text, View, Image, ScrollView, TouchableOpacity, Alert } from 'react-native';
 
+const Categories = [
+  { name: 'Anime', image: require('../../assets/images/Anime.jpg') },
+  { name: 'Movies', image: require('../../assets/images/Movies.jpg') },
+  { name: 'Games', image: require('../../assets/images/Games.jpg') },
+  { name: 'Books', image: require('../../assets/images/Books.jpg') },
+  { name: 'Music', image: require('../../assets/images/Music.jpg') },
+  { name: 'TV Shows', image: require('../../assets/images/TVShows.jpg') },
+  { name: 'Manga', image: require('../../assets/images/Manga.jpg') },
+  { name: 'Podcasts', image: require('../../assets/images/Podcasts.jpg') },
+];
+
 export const Search = () => {
-  const Categories = [
-    { name: 'Anime', image: require('../../assets/images/Anime.jpg') },
-    { name: 'Movies', image: require('../../assets/images/Movies.jpg') },
-    { name: 'Games', image: require('../../assets/images/Games.jpg') },
-    { name: 'Books', image: require('../../assets/images/Books.jpg') },
-    { name: 'Music', image: require('../../assets/images/Music.jpg') },
-    { name: 'TV Shows', image: require('../../assets/images/TVShows.jpg') },
-    { name: 'Manga', image: require('../../assets/images/Manga.jpg') },
-    { name: 'Podcasts', image: require('../../assets/images/Podcasts.jpg') },
-  ];
   const CategoryPressed = (categoryName) => {
     Alert.alert(`You pressed ${categoryName}`);
   };
@@ -33,7 +34,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#000',
-    marginVertical: -12,
+    marginTop: -20,
     padding: 13,
   },
   header: {
@@ -55,7 +56,7 @@ const styles = StyleSheet.create({
     width: '100%',
     height: 150,
     borderRadius: 10,
-    borderWidth: 2,
+    borderWidth: 1,
     borderColor: '#fff',
   },
   categoryText: {

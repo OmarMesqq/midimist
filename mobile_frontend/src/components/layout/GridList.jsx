@@ -30,9 +30,9 @@ export const List = () => {
   );
 
   return (
-    <View style={styles.home}>
+    <View style={styles.container}>
       <View style={styles.switchContainer}>
-        <Text style={styles.headerText}>Movies</Text>
+        <Text style={styles.header}>My List: Movies</Text>
         <Switch
           value={isGridView}
           onValueChange={(value) => setIsGridView(value)}
@@ -52,21 +52,22 @@ export const List = () => {
 };
 
 const styles = StyleSheet.create({
-  home: {
+  container: {
     flex: 1,
-    backgroundColor: '#000000',
-    padding: 20,
-    paddingTop: 40,
+    backgroundColor: '#000',
+    marginTop: -20,
+    padding: 13,
+  },
+  header: {
+    fontSize: 20,
+    color: '#fff',
+    marginVertical: 15,
+    textAlign: 'left',
   },
   switchContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: 10,
-  },
-  headerText: {
-    color: 'white',
-    fontSize: 20,
   },
   movieList: {
     flex: 1,
