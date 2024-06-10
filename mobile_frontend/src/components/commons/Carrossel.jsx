@@ -1,18 +1,18 @@
 import React from 'react';
-import { View, Image, StyleSheet, Dimensions } from 'react-native';
+import { View, Image, StyleSheet, Dimensions, Text } from 'react-native';
 import Carousel from 'react-native-reanimated-carousel';
 
 const { width: viewPortWidth } = Dimensions.get('window');
 
 const Carrossel = ({ data }) => {
+
   const renderItem = ({ item }) => (
     <View style={styles.slide}>
-      {item && item.poster_path ? (
-        <Image
-          source={{ uri: `https://image.tmdb.org/t/p/w500${item.poster_path}` }}
-          style={styles.poster}
-        />
-      ) : null}
+      <Image 
+        source={{ uri: `https://image.tmdb.org/t/p/${item.poster_path}` }} 
+        style={styles.poster} 
+      />
+      <Text style={styles.title}>{item.original_title}</Text>
     </View>
   );
 
