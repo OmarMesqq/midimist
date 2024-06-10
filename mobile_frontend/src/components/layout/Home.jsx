@@ -7,10 +7,9 @@ import {shrek} from "../../mocks/movieCarouselMocks";
 
 export const Home = () => {
   return (
-    <View style={styles.home}>
-
-	  <View style={styles.popularReviews}>
-	  	<Text style={styles.headerText}>
+    <View style={styles.container}>
+	  <View>
+	  	<Text style={styles.header}>
        		   Popular Reviews
        		 </Text>
 	  	<UserReviewBox
@@ -19,51 +18,22 @@ export const Home = () => {
        			 imageUrl={abateReview.imageUrl}
      		 />
 	  </View>
-
-	  <View style={styles.mediaTypes}>
-	  </View>
-	
-	  <View style={styles.forYou}>
-		<Text style={styles.headerText}>
-       			For You   
-	  </Text>
-    
-    <Carrossel
-    data={shrek.data}
-    renderItem={({ item }) => (
-        item && item.poster_path ? (
-            <Image source={{ uri: process.env.TMDB_BASE_URL + item.poster_path }} style={{ width: 500, height: 500 }} />
-        ) : null
-    )}
-    itemWidth={500}
-    sliderWidth={500}
-  />
-    
-    </View>
     </View>
   );
 };
 
-
 const styles = StyleSheet.create({
-  home: {
+  container: {
     flex: 1,
-    backgroundColor: '#000000',
-    padding: 20,
+    backgroundColor: '#000',
+    marginTop: -20,
+    padding: 13,
   },
-  popularReviews: {
-    marginBottom: 20,
-  },
-  headerText: {
-    color: 'white',
+  header: {
     fontSize: 20,
-    marginBottom: 10,
-  },
-  mediaTypes: {
-    marginBottom: 20,
-  },
-  forYou: {
-    marginBottom: 20,
+    color: '#fff',
+    marginVertical: 15,
+    textAlign: 'left',
   },
   Carrossel:{
     marginBottom: 20

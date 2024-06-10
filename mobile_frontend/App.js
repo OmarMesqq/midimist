@@ -1,47 +1,38 @@
-import { useEffect, useState } from 'react';
-import { useColorScheme } from 'react-native';
+import React from 'react';
+import { useColorScheme, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { StyleSheet } from "react-native";
-import { TopBar } from './src/components/commons/TopBar'
-import { BottomBar } from './src/components/commons/BottomBar'
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { TopBar } from './src/components/commons/TopBar';
+import { BottomBar } from './src/components/commons/BottomBar';
 import { Profile } from './src/components/layout/Profile';
 import { Notifications } from './src/components/layout/Notifications';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
-
+import { Notes } from './src/components/layout/Notes';
+import { ChatDetails } from './src/components/layout/ChatDetails';
+import { MovieDetails } from './src/components/layout/MovieDetails';
 
 const Stack = createNativeStackNavigator();
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
-  const [activeComponent, setActiveComponent] = useState('Home');
-  const [apiStatus, setApiStatus] = useState([]);
-
-  useEffect(() => {
-    fetch('http://localhost:8080/api')
-      .then((res) => {
-        return res.text();
-      })
-      .then((data) => {
-        console.log(data);
-        setApiStatus(data);
-      })
-      .catch((e) => {
-        console.debug(">>> Erro ao se conectar com a API: ", e);
-      });
-  }, []);
 
   return (
     <SafeAreaProvider style={styles.appStyle}>
       <NavigationContainer>
-        <Stack.Navigator screenOptions={{
-          header: () => <TopBar setActiveComponent={setActiveComponent} />,
-        }}>
-          <Stack.Screen name="BottomNavBar" component={BottomBar} />
-          <Stack.Screen name="Profile" component={Profile} />
-          <Stack.Screen name="Notifications" component={Notifications} />
-        </Stack.Navigator>
-      </NavigationContainer>
+	  <Stack.Navigator
+  		screenOptions={{
+		    header: (props) => <TopBar {...props} />,
+  		}}
+>
+  <Stack.Screen name="BottomNavBar" component={BottomBar} />
+  <Stack.Screen name="Profile" component={Profile} />
+  <Stack.Screen name="Notifications" component={Notifications} />
+  <Stack.Screen name="Notes" component={Notes} />
+  <Stack.Screen name="ChatDetails" component={ChatDetails} />
+  <Stack.Screen name="MovieDetails" component={MovieDetails} />
+</Stack.Navigator>
+
+     </NavigationContainer>
     </SafeAreaProvider>
   );
 }
