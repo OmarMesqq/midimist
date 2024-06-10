@@ -1,4 +1,3 @@
-// ProfileChat.jsx
 import React from 'react';
 import { View, Image, TouchableOpacity, StyleSheet } from 'react-native';
 
@@ -37,31 +36,26 @@ const styles = StyleSheet.create({
   image: {
     width: 50,
     height: 50,
-    borderRadius: 25,
-    borderWidth: 2,
-    borderColor: 'white',
   },
   status: {
     position: 'absolute',
     right: 0,
     bottom: 0,
-    width: 15,
-    height: 15,
+    width: 10,
+    height: 10,
     borderRadius: 7.5,
-    borderWidth: 2,
-    borderColor: 'white',
   },
   statusOnline: {
-    backgroundColor: 'green',
+    backgroundColor: '#96FF7C',
   },
   statusOffline: {
     backgroundColor: 'gray',
   },
   statusBusy: {
-    backgroundColor: 'red',
+    backgroundColor: '#FF4747',
   },
   statusAway: {
-    backgroundColor: 'yellow',
+    backgroundColor: '#FFF847',
   },
 });
 

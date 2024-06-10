@@ -19,28 +19,26 @@ const ChatItem = ({ profileImage, name, lastMessage, chatId, navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    padding: 10,
-    backgroundColor: '#1a1a1a',
+    padding: 5,
+    backgroundColor: '#1D1D1D',
     borderRadius: 10,
     marginBottom: 10,
   },
   image: {
-    width: 50,
-    height: 50,
-    borderRadius: 25,
+    width: 45,
+    height: 45,
     marginRight: 10,
   },
   textContainer: {
     justifyContent: 'center',
   },
   name: {
-    color: 'white',
-    fontSize: 16,
-    fontWeight: 'bold',
+    color: '#fff',
+    fontSize: 14,
   },
   lastMessage: {
     color: 'gray',
-    fontSize: 14,
+    fontSize: 12,
   },
 });
 

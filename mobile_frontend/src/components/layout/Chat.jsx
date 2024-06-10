@@ -6,34 +6,29 @@ import ChatItem from '../commons/ChatItem';
 export const Chat = ({ navigation }) => {
   const friends = [
     { profileImage: require('../../assets/images/profile.png'), status: 'online' },
-    { profileImage: require('../../assets/images/profile.png'), status: 'offline' },
+    { profileImage: require('../../assets/images/profile.png'), status: 'online' },
     { profileImage: require('../../assets/images/profile.png'), status: 'busy' },
     { profileImage: require('../../assets/images/profile.png'), status: 'away' },
-    { profileImage: require('../../assets/images/profile.png'), status: 'online' },
     { profileImage: require('../../assets/images/profile.png'), status: 'offline' },
-    { profileImage: require('../../assets/images/profile.png'), status: 'busy' },
-    { profileImage: require('../../assets/images/profile.png'), status: 'away' },
-    { profileImage: require('../../assets/images/profile.png'), status: 'online' },
     { profileImage: require('../../assets/images/profile.png'), status: 'offline' },
-    { profileImage: require('../../assets/images/profile.png'), status: 'busy' },
-    { profileImage: require('../../assets/images/profile.png'), status: 'away' },
-    { profileImage: require('../../assets/images/profile.png'), status: 'online' },
+    { profileImage: require('../../assets/images/profile.png'), status: 'offline' },
   ];
 
   const chats = [
-    { id: '1', profileImage: require('../../assets/images/profile.png'), name: 'User 2', lastMessage: 'Last Message' },
-    { id: '2', profileImage: require('../../assets/images/profile.png'), name: 'Group 1', lastMessage: 'You: Message' },
-    { id: '3', profileImage: require('../../assets/images/profile.png'), name: 'Group 2', lastMessage: 'You: Message' },
-    { id: '4', profileImage: require('../../assets/images/profile.png'), name: 'Group 3', lastMessage: 'You: Message' },
-    { id: '5', profileImage: require('../../assets/images/profile.png'), name: 'Group 4', lastMessage: 'You: Message' },
-    { id: '6', profileImage: require('../../assets/images/profile.png'), name: 'Group 5', lastMessage: 'You: Message' },
-    { id: '7', profileImage: require('../../assets/images/profile.png'), name: 'Group 6', lastMessage: 'You: Message' },
+    { id: '1', profileImage: require('../../assets/images/profile.png'), name: 'User', lastMessage: 'You: Message' },
+    { id: '2', profileImage: require('../../assets/images/profile.png'), name: 'User', lastMessage: 'User: Message' },
+    { id: '3', profileImage: require('../../assets/images/group.png'), name: 'Group 1', lastMessage: 'You: Message' },
+    { id: '4', profileImage: require('../../assets/images/group.png'), name: 'Group 2', lastMessage: 'User: Message' },
+    { id: '5', profileImage: require('../../assets/images/group.png'), name: 'Group 3', lastMessage: 'You: Message' },
+    { id: '6', profileImage: require('../../assets/images/group.png'), name: 'Group 4', lastMessage: 'User: Message' },
+    { id: '7', profileImage: require('../../assets/images/group.png'), name: 'Group 5', lastMessage: 'You: Message' },
+    { id: '8', profileImage: require('../../assets/images/group.png'), name: 'Group 6', lastMessage: 'You: Message' },
   ];
 
   return (
-    <View style={styles.home}>
-      <Text style={styles.headerText}>Friends</Text>
-      <ScrollView horizontal style={styles.scrollContainer} contentContainerStyle={styles.scrollContentContainer} showsHorizontalScrollIndicator={false}>
+    <View style={styles.container}>
+      <Text style={styles.header}>Friends</Text>
+      <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         {friends.map((friend, index) => (
           <ProfileButton
             key={index}
@@ -42,8 +37,8 @@ export const Chat = ({ navigation }) => {
           />
         ))}
       </ScrollView>
-      <Text style={styles.headerText}>Chats</Text>
-      <FlatList
+      <Text style={styles.header}>Chats</Text>
+      <FlatList 
         data={chats}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
@@ -55,33 +50,24 @@ export const Chat = ({ navigation }) => {
             navigation={navigation}
           />
         )}
-        style={styles.chatList}
+        showsVerticalScrollIndicator={false}
       />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  home: {
+  container: {
     flex: 1,
-    backgroundColor: '#000000',
-    padding: 20,
-    paddingTop: 40, // Adiciona espaço no topo
+    backgroundColor: '#000',
+    marginTop: -20,
+    padding: 13,
   },
-  scrollContainer: {
-    flexDirection: 'row',
-  },
-  scrollContentContainer: {
-    alignItems: 'flex-start', // Alinha os itens no topo
-  },
-  headerText: {
-    color: 'white',
+  header: {
     fontSize: 20,
-    marginBottom: 10,
-    marginTop: 10,
-  },
-  chatList: {
-    marginTop: 10,
+    color: '#fff',
+    marginVertical: 15,
+    textAlign: 'left',
   },
 });
 

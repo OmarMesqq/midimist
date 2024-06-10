@@ -20,7 +20,11 @@
     "expo-linear-gradient": "~13.0.2",
     "react-dom": "18.2.0",
     "react-native-web": "~0.19.10",
-    "@expo/metro-runtime": "~3.2.1"
+    "@expo/metro-runtime": "~3.2.1",
+    "expo-router": "~3.5.15",
+    "react-native-screens": "3.31.1",
+    "expo-linking": "~6.3.1",
+    "expo-constants": "~16.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"
