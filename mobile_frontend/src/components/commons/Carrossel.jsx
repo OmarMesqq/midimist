@@ -9,7 +9,7 @@ const Carrossel = ({ data }) => {
   const renderItem = ({ item }) => (
     <View style={styles.slide}>
       <Image 
-        source={{ uri: `https://image.tmdb.org/t/p/${item.poster_path}` }} 
+        source={{ uri: `https://image.tmdb.org/t/p/w500/${item.poster_path}` }} 
         style={styles.poster} 
       />
       <Text style={styles.title}>{item.original_title}</Text>
