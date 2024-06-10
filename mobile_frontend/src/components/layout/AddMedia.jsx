@@ -10,6 +10,13 @@ export const AddMedia = () => {
 
   const statusArray = ['Consumed', 'Consuming', 'Dropped', 'Planning'];
 
+  const donePressed = () => {
+    setTitle('');
+    setReview('');
+    setSelectedStatus('');
+    setScore(0);
+  };
+
   return (
     <View style={styles.container}>
     <Text style={styles.header}>Title</Text>
@@ -52,7 +59,7 @@ export const AddMedia = () => {
     <Text style={styles.header}>Write a Review</Text>
     <TextInput style={[styles.reviewInput]} placeholder="Insert review text" placeholderTextColor="#D9D9D9" multiline value={review} onChangeText={setReview}/>
       
-    <TouchableOpacity style={styles.button}>
+    <TouchableOpacity style={styles.button} onPress = {donePressed}>
       <Text style={styles.buttonText}>Done</Text>
     </TouchableOpacity>
     </View>
