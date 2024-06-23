@@ -1,15 +1,16 @@
 {
   "expo": {
-    "name": "mobile_frontend",
-    "slug": "mobile_frontend",
+    "name": "MidiMist",
+    "slug": "midimist",
+    "scheme": "MidiMist",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./src/assets/images/logo.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./src/assets/images/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#0c0c0c"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -19,12 +20,12 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "./src/assets/images/logo.png",
+        "backgroundColor": "#0c0c0c"
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./src/assets/images/favicon.png"
     },
     "plugins": [
       "expo-router"
