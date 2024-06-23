@@ -1,10 +1,9 @@
-## Projeto de INF1039
+## Midimist 
 
-- `mobile_frontend`: contém o aplicativo Android e iOS
 
 ### Setup 
 
-1. Segue a configuração de um projeto Expo
+follows a standard Expo project configuration:
     - `npm install`
     - `npx expo start`
 
