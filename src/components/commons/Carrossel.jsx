@@ -6,8 +6,8 @@ const { width: viewPortWidth } = Dimensions.get('window');
 
 const Carrossel = ({ data }) => {
 
-  const renderItem = ({ item }) => (
-    <View style={styles.slide}>
+const renderItem = ({ item }) => (
+  <View style={styles.slide}>
       <Image 
         source={{ uri: `https://image.tmdb.org/t/p/w500/${item.poster_path}` }} 
         style={styles.poster} 

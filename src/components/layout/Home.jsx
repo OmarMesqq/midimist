@@ -1,9 +1,8 @@
-import { Text, View, StyleSheet, Pressable } from "react-native";
+import { View, Image, StyleSheet, Dimensions, Text } from 'react-native';
 import UserReviewBox from "../commons/UserReviewBox";
 import {abateReview} from "../../mocks/UserReviewMocks";	
 import Carrossel from "../../components/commons/Carrossel"
 import {shrek} from "../../mocks/movieCarouselMocks";
-
 
 export const Home = () => {
   return (
@@ -18,6 +17,10 @@ export const Home = () => {
        			 imageUrl={abateReview.imageUrl}
      		 />
 	  </View>
+      
+      <Carrossel
+	data={shrek.data}
+      />
     </View>
   );
 };
