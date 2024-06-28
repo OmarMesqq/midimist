@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image, ScrollView, TouchableOpacity, Alert } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity, Alert, FlatList } from 'react-native';
 
 const Categories = [
   { name: 'Anime', image: require('../../assets/images/Anime.jpg') },
@@ -15,18 +15,25 @@ export const Search = () => {
   const CategoryPressed = (categoryName) => {
     Alert.alert(`You pressed ${categoryName}`);
   };
+
+  const renderItem = ({ item }) => (
+    <TouchableOpacity style={styles.categoryContainer} onPress={() => CategoryPressed(item.name)}>
+      <Image source={item.image} style={styles.image}/>
+      <Text style={styles.categoryText}>{item.name}</Text>
+    </TouchableOpacity>
+  );
+
   return (
-    <ScrollView style={styles.container}>
+    <View style={styles.container}>
       <Text style={styles.header}>Categories</Text>
-      <View style={styles.grid}>
-        {Categories.map((category, index) => (
-          <TouchableOpacity key={index} style={styles.categoryContainer} onPress={() => CategoryPressed(category.name)}>
-            <Image source={category.image} style={styles.image} />
-            <Text style={styles.categoryText}>{category.name}</Text>
-          </TouchableOpacity>
-        ))}
-      </View>
-    </ScrollView>
+      <FlatList
+        data={Categories}
+        renderItem={renderItem}
+        keyExtractor={(item, index) => index.toString()}
+        numColumns={2}
+        columnWrapperStyle={styles.grid}
+      />
+    </View>
   );
 }
 
@@ -50,7 +57,7 @@ const styles = StyleSheet.create({
   },
   categoryContainer: {
     width: '48%',
-    marginBottom: 15,
+    marginBottom: 17,
   },
   image: {
     width: '100%',
