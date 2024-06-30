@@ -13,7 +13,7 @@ const renderItem = ({ item }) => (
     <UserReviewBox
       imageUrl = { `https://image.tmdb.org/t/p/w500/${item.poster_path}` }
       username={item.original_title}
-      review={item.original_title}
+      review={item.overview}
     />
   </View>
   );
@@ -36,10 +36,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: 10,
-    margin: 10,
     borderRadius: 5,
-  },
+    },
   poster: {
     height: 200,
     borderRadius: 20,

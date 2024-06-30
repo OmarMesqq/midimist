@@ -6,7 +6,7 @@ return (
     <LinearGradient colors={['#33f5f0', '#043737']} style={styles.gradientBox}>
       <View style={styles.textContainer}>
         <Text style={styles.username}>{username}</Text>
-        <Text style={styles.review}>{review}</Text>
+        <Text style={styles.review}>{review.length < 120 ? review : `${review.substring(0, 120)}...`}</Text>
       </View>
       <Image source={{ uri: imageUrl }} style={styles.movieImage} />
     </LinearGradient>
