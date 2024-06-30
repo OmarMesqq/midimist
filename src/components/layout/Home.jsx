@@ -17,7 +17,11 @@ export const Home = () => {
        			 imageUrl={abateReview.imageUrl}
      		 />
 	  </View>
-      
+
+      <Text style={styles.header}>
+	For you
+      </Text>
+
       <Carrossel
 	data={shrek.data}
       />

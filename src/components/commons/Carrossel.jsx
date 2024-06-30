@@ -1,6 +1,8 @@
 import React from 'react';
 import { View, Image, StyleSheet, Dimensions, Text } from 'react-native';
 import Carousel from 'react-native-reanimated-carousel';
+import UserReviewBox from "../commons/UserReviewBox";
+
 
 const { width: viewPortWidth } = Dimensions.get('window');
 
@@ -8,17 +10,17 @@ const Carrossel = ({ data }) => {
 
 const renderItem = ({ item }) => (
   <View style={styles.slide}>
-      <Image 
-        source={{ uri: `https://image.tmdb.org/t/p/w500/${item.poster_path}` }} 
-        style={styles.poster} 
-      />
-      <Text style={styles.title}>{item.original_title}</Text>
-    </View>
+    <UserReviewBox
+      imageUrl = { `https://image.tmdb.org/t/p/w500/${item.poster_path}` }
+      username={item.original_title}
+      review={item.original_title}
+    />
+  </View>
   );
 
   return (
     <Carousel
-      width={viewPortWidth}
+      width={viewPortWidth - 50}
       height={200}
       data={data}
       renderItem={renderItem}
@@ -31,14 +33,21 @@ const renderItem = ({ item }) => (
 const styles = StyleSheet.create({
   slide: {
     flex: 1,
-    justifyContent: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     alignItems: 'center',
+    padding: 10,
+    margin: 10,
+    borderRadius: 5,
   },
   poster: {
-    width: '100%',
     height: 200,
-    borderRadius: 10,
+    borderRadius: 20,
     marginBottom: 10,
+  },
+  textContainer: {
+    flex: 1,
+    marginRight: 10,
   },
   title: {
     fontSize: 18,
