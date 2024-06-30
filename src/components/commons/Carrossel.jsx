@@ -20,7 +20,7 @@ const renderItem = ({ item }) => (
 
   return (
     <Carousel
-      width={viewPortWidth - 50}
+      width={viewPortWidth - 10}
       height={200}
       data={data}
       renderItem={renderItem}
@@ -32,11 +32,11 @@ const renderItem = ({ item }) => (
 
 const styles = StyleSheet.create({
   slide: {
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    borderRadius: 5,
+    //flex: 1,
+    //flexDirection: 'row',
+    //justifyContent: 'space-between',
+    //alignItems: 'center',
+    //borderRadius: 5,
     },
   poster: {
     height: 200,

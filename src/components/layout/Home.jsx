@@ -7,17 +7,18 @@ import {shrek} from "../../mocks/movieCarouselMocks";
 export const Home = () => {
   return (
     <View style={styles.container}>
-	  <View>
-	  	<Text style={styles.header}>
-       		   Popular Reviews
-       		 </Text>
-	  	<UserReviewBox
-       			 username={abateReview.username}
-       			 review={abateReview.review}
-       			 imageUrl={abateReview.imageUrl}
-     		 />
-	  </View>
-
+      <View>
+	<Text style={styles.header}>
+	  Popular Reviews
+       	</Text>
+	<UserReviewBox
+	  username={abateReview.username}
+       	  review={abateReview.review}
+       	  imageUrl={abateReview.imageUrl}
+     	/>
+      </View>
+      
+    <View>
       <Text style={styles.header}>
 	For you
       </Text>
@@ -26,6 +27,7 @@ export const Home = () => {
 	data={shrek.data}
       />
     </View>
+  </View>
   );
 };
 
@@ -34,15 +36,12 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#000',
     marginTop: -20,
-    padding: 13,
+    padding: 10,
   },
   header: {
     fontSize: 20,
     color: '#fff',
     marginVertical: 15,
     textAlign: 'left',
-  },
-  Carrossel:{
-    marginBottom: 20
   }
 });
