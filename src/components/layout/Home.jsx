@@ -1,6 +1,9 @@
 import { Text, View, StyleSheet, Pressable } from "react-native";
 import UserReviewBox from "../commons/UserReviewBox";
 import {abateReview} from "../../mocks/UserReviewMocks";	
+import Carrossel from "../../components/commons/Carrossel"
+import {shrek} from "../../mocks/movieCarouselMocks";
+
 
 export const Home = () => {
   return (
@@ -32,4 +35,7 @@ const styles = StyleSheet.create({
     marginVertical: 15,
     textAlign: 'left',
   },
+  Carrossel:{
+    marginBottom: 20
+  }
 });
