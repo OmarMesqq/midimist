@@ -1,20 +1,23 @@
 import React from 'react';
-import { View, Image, StyleSheet, Dimensions, Text } from 'react-native';
+import { View, Image, StyleSheet, Dimensions, Text, Modal, Pressable} from 'react-native';
 import Carousel from 'react-native-reanimated-carousel';
 import UserReviewBox from "../commons/UserReviewBox";
 
 
 const { width: viewPortWidth } = Dimensions.get('window');
 
-const Carrossel = ({ data }) => {
+
+const Carrossel = ({ data, openModal }) => {
 
 const renderItem = ({ item }) => (
   <View style={styles.slide}>
-    <UserReviewBox
-      imageUrl = { `https://image.tmdb.org/t/p/w500/${item.poster_path}` }
-      username={item.original_title}
-      review={item.overview}
-    />
+    <Pressable onPress = {() => openModal(item)}>
+      <UserReviewBox
+        imageUrl = { `https://image.tmdb.org/t/p/w500/${item.poster_path}` }
+        username={item.original_title}
+        review={item.overview}
+      />
+    </Pressable>
   </View>
   );
 
