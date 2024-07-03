@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Modal, Button } from 'react-native';
+import { View, Text, StyleSheet, Modal, Button, ScrollView} from 'react-native';
 import UserReviewBox from "../commons/UserReviewBox";
 import { abateReview } from "../../mocks/UserReviewMocks";	
 import Carrossel from "../../components/commons/Carrossel";
@@ -15,8 +15,9 @@ export const Home = () => {
   const closeModal = () => { setModalVisible(false); };
 
   return (
+    <ScrollView>
     <View style={styles.container}>
-      <View style={styles.section}>
+      <View>
         <Text style={styles.header}>Popular Reviews</Text>
         <UserReviewBox
           username={abateReview.username}
@@ -57,6 +58,7 @@ export const Home = () => {
         </View>
       </Modal>
     </View>
+    </ScrollView>
   );
 };
 
@@ -67,7 +69,7 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   section: {
-    marginBottom: 20,
+    marginBottom: 10,
   },
   header: {
     fontSize: 20,
