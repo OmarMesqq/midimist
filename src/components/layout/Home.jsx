@@ -2,7 +2,7 @@ import { View, Text, StyleSheet, Modal, Button, ScrollView} from 'react-native';
 import UserReviewBox from "../commons/UserReviewBox";
 import { abateReview } from "../../mocks/UserReviewMocks";	
 import Carrossel from "../../components/commons/Carrossel";
-import { shrek } from "../../mocks/movieCarouselMocks";
+import { shrek, seriesTV, animeData } from "../../mocks/movieCarouselMocks";
 import { useState } from 'react';
 
 export const Home = () => {
@@ -35,9 +35,9 @@ export const Home = () => {
       </View>
       
       <View style={styles.section}>
-        <Text style={styles.header}>Games For You</Text>
+        <Text style={styles.header}>TV Series For You</Text>
         <Carrossel
-          data={shrek.data}
+          data={seriesTV.data}
           openModal={openModal}
         />
       </View>
@@ -45,7 +45,7 @@ export const Home = () => {
       <View style={styles.section}>
         <Text style={styles.header}>Anime For You</Text>
         <Carrossel
-          data={shrek.data}
+          data={animeData.data}
           openModal={openModal}
         />
       </View>
